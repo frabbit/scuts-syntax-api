@@ -110,7 +110,7 @@ class ImplOf {
 
 
 
-							res = fields.concat(apiFields.map(mapField.bind(_, params, cl) ));
+							res = res.concat(apiFields.map(mapField.bind(_, params, cl) ));
 						case _:
 							C.fatalError("error", C.currentPos());
 					}
