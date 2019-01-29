@@ -52,7 +52,7 @@ class ImplOf {
 
 				var name = f.name;
 
-				var nexpr = macro return _X.$name($a{eargs});
+				var nexpr = macro @:pos(f.pos) return _X.$name($a{eargs});
 
 				var decls:Array<TypeParamDecl> = cl.params.map(p -> ({ name: p.name}:TypeParamDecl) );
 

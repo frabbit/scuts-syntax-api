@@ -17,14 +17,6 @@ class ImplDef {
 	public static var store = createStore();
 
 
-
-	static var init = {
-		haxe.macro.Context.onMacroContextReused( () -> {
-			store = createStore();
-			return true;
-		});
-	}
-
 	static function createStore () return new Map<String, Array<Field>>();
 
 	static var BUILD_ID = ':scuts.syntax.api.ImplDef';
